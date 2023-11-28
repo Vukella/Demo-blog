@@ -11,21 +11,21 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
     <!-- icofont -->
-    <link rel="stylesheet" href="assets/css/fontawesome.5.7.2.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.5.7.2.css')}}">
     <!-- flaticon -->
-    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css')}}">
     <!-- animate.css -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css')}}">
     <!-- magnific popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <!-- responsive -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <div class="responsive-mobile-menu">
                 <div class="logo-wrapper">
                     <a href="index.html" class="logo">
-                        <img src="assets/img/logo.png" alt="logo">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appside_main_menu" 
@@ -72,11 +72,11 @@
 </nav>
     <!-- header area start  -->
     <header class="header-area header-bg" id="home">
-            <div class="shape-1"><img src="assets/img/shape/01.png" alt=""></div>
-            <div class="shape-2"><img src="assets/img/shape/02.png" alt=""></div>
-            <div class="shape-3"><img src="assets/img/shape/03.png" alt=""></div>
+            <div class="shape-1"><img src="{{ asset('assets/img/shape/01.png') }}" alt=""></div>
+            <div class="shape-2"><img src="{{ asset('assets/img/shape/02.png') }}" alt=""></div>
+            <div class="shape-3"><img src="{{ asset('assets/img/shape/03.png') }}" alt=""></div>
         <div class="header-right-image wow zoomIn">
-            <img src="assets/img/mobile-image-4.png" alt="header right image">
+            <img src="{{ asset('assets/img/mobile-image-4.png') }}" alt="header right image">
         </div>
         <div class="container">
             <div class="row">
@@ -169,7 +169,7 @@
             <div class="col-lg-6">
                 <div class="img-with-video">
                     <div class="img-wrap">
-                        <img src="assets/img/video-image.jpg" alt="">
+                        <img src="{{ asset('assets/img/video-image.jpg') }}" alt="">
                         <div class="hover">
                             <a href="https://www.youtube.com/watch?v=tdBzJRdy33M" class="video-play-btn mfp-iframe"><i class="fas fa-play"></i></a>
                         </div>
@@ -277,7 +277,7 @@
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="center-image">
-                    <img src="assets/img/mobile-img-2.png" alt="mobile image two">
+                    <img src="{{ asset('assets/img/mobile-img-2.png') }}" alt="mobile image two">
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
@@ -307,10 +307,10 @@
 
 <!-- how it works area start -->
 <section class="how-it-work-area">
-        <div class="shape-1"><img src="assets/img/shape/08.png" alt=""></div>
-        <div class="shape-2"><img src="assets/img/shape/09.png" alt=""></div>
-        <div class="shape-3"><img src="assets/img/shape/08.png" alt=""></div>
-        <div class="shape-4"><img src="assets/img/shape/09.png" alt=""></div>
+        <div class="shape-1"><img src="{{ asset('assets/img/shape/08.png') }}" alt=""></div>
+        <div class="shape-2"><img src="{{ asset('assets/img/shape/09.png') }}" alt=""></div>
+        <div class="shape-3"><img src="{{ asset('assets/img/shape/08.png') }}" alt=""></div>
+        <div class="shape-4"><img src="{{ asset('assets/img/shape/09.png') }}" alt=""></div>
     <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -353,7 +353,7 @@
                                     <div class="col-lg-6">
                                         <div class="right-content-area">
                                             <div class="img-wrapper">
-                                                <img src="assets/img/how-it-works-image.png" alt="how it works image">
+                                                <img src="{{ asset('assets/img/how-it-works-image.png') }}" alt="how it works image">
                                             </div>
                                         </div>
                                     </div>
@@ -376,7 +376,7 @@
                                     <div class="col-lg-6">
                                         <div class="right-content-area">
                                             <div class="img-wrapper">
-                                                <img src="assets/img/how-it-works-image.png" alt="how it works image">
+                                                <img src="{{ asset('assets/img/how-it-works-image.png') }}" alt="how it works image">
                                             </div>
                                         </div>
                                     </div>
@@ -399,7 +399,7 @@
                                     <div class="col-lg-6">
                                         <div class="right-content-area">
                                             <div class="img-wrapper">
-                                                <img src="assets/img/how-it-works-image.png" alt="how it works image">
+                                                <img src="{{ asset('assets/img/how-it-works-image.png') }}" alt="how it works image">
                                             </div>
                                         </div>
                                     </div>
@@ -415,8 +415,8 @@
 
 <!-- screenshort area start -->
 <section class="screenshort-area">
-        <div class="shape-1"><img src="assets/img/shape/08.png" alt=""></div>
-        <div class="shape-2"><img src="assets/img/shape/09.png" alt=""></div>
+        <div class="shape-1"><img src="{{ asset('assets/img/shape/08.png') }}" alt=""></div>
+        <div class="shape-2"><img src="{{ asset('assets/img/shape/09.png') }}" alt=""></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -431,16 +431,16 @@
             <div class="col-lg-12">
                 <div class="screenshort-carousel"><!-- screenshort carousel -->
                     <div class="single-screenshort-item"><!-- single screenshort item -->
-                        <img src="assets/img/screenshort/screen-1.jpg" alt="">
+                        <img src="{{ asset('assets/img/screenshort/screen-1.jpg') }}" alt="">
                     </div><!-- //.single screenshort item -->
                     <div class="single-screenshort-item"><!-- single screenshort item -->
-                        <img src="assets/img/screenshort/screen-2.jpg" alt="">
+                        <img src="{{ asset('assets/img/screenshort/screen-2.jpg') }}" alt="">
                     </div><!-- //.single screenshort item -->
                     <div class="single-screenshort-item"><!-- single screenshort item -->
-                        <img src="assets/img/screenshort/screen-3.jpg" alt="">
+                        <img src="{{ asset('assets/img/screenshort/screen-3.jpg') }}" alt="">
                     </div><!-- //.single screenshort item -->
                     <div class="single-screenshort-item"><!-- single screenshort item -->
-                        <img src="assets/img/screenshort/screen-4.jpg" alt="">
+                        <img src="{{ asset('assets/img/screenshort/screen-4.jpg') }}" alt="">
                     </div><!-- //.single screenshort item -->
                 </div><!-- //. screenshort carousel -->
             </div>
@@ -451,8 +451,8 @@
 
 <!-- testimonial area start -->
 <section class="testimonial-area">
-        <div class="shape-1"><img src="assets/img/shape/08.png" alt=""></div>
-        <div class="shape-2"><img src="assets/img/shape/09.png" alt=""></div>
+        <div class="shape-1"><img src="{{ asset('assets/img/shape/08.png') }} " alt=""></div>
+        <div class="shape-2"><img src="{{ asset('assets/img/shape/09.png') }} " alt=""></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -469,7 +469,7 @@
 
                     <div class="single-testimonial-item"><!-- single testimonial item -->
                         <div class="thumb">
-                            <img src="assets/img/testimonial/01.jpg" alt="">
+                            <img src="{{ asset('assets/img/testimonial/01.jpg') }}" alt="">
                         </div>
                        
                         <div class="hover"><!-- hover -->
@@ -485,7 +485,7 @@
                     </div><!-- //. single testimonial item -->
                     <div class="single-testimonial-item"><!-- single testimonial item -->
                         <div class="thumb">
-                            <img src="assets/img/testimonial/02.jpg" alt="">
+                            <img src="{{ asset('assets/img/testimonial/02.jpg') }}" alt="">
                         </div>
                        
                         <div class="hover"><!-- hover -->
@@ -501,7 +501,7 @@
                     </div><!-- //. single testimonial item -->
                     <div class="single-testimonial-item"><!-- single testimonial item -->
                         <div class="thumb">
-                            <img src="assets/img/testimonial/03.jpg" alt="">
+                            <img src="{{ asset('assets/img/testimonial/03.jpg') }}" alt="">
                         </div>
                        
                         <div class="hover"><!-- hover -->
@@ -609,13 +609,13 @@
 <!-- team member area start -->
 <section class="team-member-area" id="team">
     <div class="bg-shape-1">
-        <img src="assets/img/bg/team-shape.png" alt="">
+        <img src="{{ asset('assets/img/bg/team-shape.png') }}" alt="">
     </div>
     <div class="bg-shape-2">
-        <img src="assets/img/bg/contact-map-bg.jpg" alt="">
+        <img src="{{ asset('assets/img/bg/contact-map-bg.jpg') }}" alt="">
     </div>
     <div class="bg-shape-3">
-        <img src="assets/img/bg/contact-mobile-bg.png" alt="">
+        <img src="{{ asset('assets/img/bg/contact-mobile-bg.png') }}" alt="">
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -632,7 +632,7 @@
                 <div class="team-carousel"><!-- team carousel -->
                     <div class="single-team-member"><!-- single team member -->
                         <div class="thumb">
-                            <img src="assets/img/team-member/01.jpg" alt="team member image">
+                            <img src="{{ asset('assets/img/team-member/01.jpg') }}" alt="team member image">
                             <div class="hover">
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -648,7 +648,7 @@
                     </div><!-- //. single team member -->
                     <div class="single-team-member"><!-- single team member -->
                         <div class="thumb">
-                            <img src="assets/img/team-member/02.jpg" alt="team member image">
+                            <img src="{{ asset('assets/img/team-member/02.jpg') }}" alt="team member image">
                             <div class="hover">
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -664,7 +664,7 @@
                     </div><!-- //. single team member -->
                     <div class="single-team-member"><!-- single team member -->
                         <div class="thumb">
-                            <img src="assets/img/team-member/03.jpg" alt="team member image">
+                            <img src="{{ asset('assets/img/team-member/03.jpg') }}" alt="team member image">
                             <div class="hover">
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -680,7 +680,7 @@
                     </div><!-- //. single team member -->
                     <div class="single-team-member"><!-- single team member -->
                         <div class="thumb">
-                            <img src="assets/img/team-member/04.jpg" alt="team member image">
+                            <img src="{{ asset('assets/img/team-member/04.jpg') }}" alt="team member image">
                             <div class="hover">
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -696,7 +696,7 @@
                     </div><!-- //. single team member -->
                     <div class="single-team-member"><!-- single team member -->
                         <div class="thumb">
-                            <img src="assets/img/team-member/05.jpg" alt="team member image">
+                            <img src="{{ asset('assets/img/team-member/05.jpg') }}" alt="team member image">
                             <div class="hover">
                                 <ul class="social-icon">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -767,7 +767,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget about_widget">
-                        <a href="index.html" class="footer-logo"><img src="assets/img/logo-white.png" alt=""></a>
+                        <a href="index.html" class="footer-logo"><img src="{{ asset('assets/img/logo-white.png') }}" alt=""></a>
                         <p>Within coming figure sex things are. Pretended concluded did repulsive education smallness yet yet described. Had country man his pressed shewing. </p>
                         <ul class="social-icon">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -864,25 +864,25 @@
   <!-- back to top area end -->
 
     <!-- jquery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <!-- popper -->
-    <script src="assets/js/popper.min.js"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <!-- owl carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <!-- magnific popup -->
-    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.js') }}"></script>
     <!-- contact js-->
-    <script src="assets/js/contact.js"></script>
+    <script src="{{ asset('assets/js/contact.js') }}"></script>
     <!-- wow js-->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
     <!-- way points js-->
-    <script src="assets/js/waypoints.min.js"></script>
+    <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
     <!-- counterup js-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
     <!-- main -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
