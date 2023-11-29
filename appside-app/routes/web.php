@@ -24,3 +24,7 @@ Route::get('/blog', function () {
 Route::get('/blog-details', function () {
     return view('blog-details');
 });
+
+Route::resource('blogs', 'BlogController');
+Route::resource('tags', 'TagController');
+Route::resource('categories', 'CategoryController');
