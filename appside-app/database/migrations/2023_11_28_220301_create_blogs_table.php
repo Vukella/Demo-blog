@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->foreignId('category_id');
+            $table->foreignId('tag_id');
             $table->text('story')->nullable();
             $table->date('published')->nullable();
             $table->timestamps();
