@@ -25,6 +25,9 @@ Route::get('/blog-details', function () {
     return view('blog-details');
 });
 
-Route::resource('blogs', 'BlogController');
-Route::resource('tags', 'TagController');
-Route::resource('categories', 'CategoryController');
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::resource('blogs', 'Admin\BlogController');
+    Route::resource('tags', 'Admin\TagController');
+    Route::resource('categories', 'Admin\CategoryController');
+});
+
