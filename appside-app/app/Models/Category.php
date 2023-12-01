@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory;
+    protected $fillable = ['name', 'slug', 'description'];
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+    public static $rules = [
+        'name' => 'required|string|max:255',
+        'slug' => 'required|string|unique:categories,slug',
+        'description' => 'nullable|string',
+    ];
 }
