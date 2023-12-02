@@ -13,9 +13,5 @@ class Category extends Model
     {
         return $this->hasMany(Blog::class);
     }
-    public static $rules = [
-        'name' => 'required|string|max:255',
-        'slug' => 'required|string|unique:categories,slug',
-        'description' => 'nullable|string',
-    ];
+
 }

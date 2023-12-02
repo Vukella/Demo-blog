@@ -11,12 +11,8 @@ class Tag extends Model
 
     public function blogs()
     {
-        return $this->hasMany(Blog::class);
+        return $this->belongsToMany(Blog::class);
     }
-    public static $rules = [
-        'name' => 'required|string|max:255',
-        'slug' => 'required|string|unique:categories,slug',
-        'description' => 'nullable|string',
-    ];
+
     
 }
