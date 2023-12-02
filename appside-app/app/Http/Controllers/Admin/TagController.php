@@ -1,67 +1,57 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\TagRequest;
 use App\Models\Tag;
-use Illuminate\Http\Request;
+use App\Models\Blog;
+use App\Models\Category;
 
 class TagController extends Controller
 {
     public function index()
     {
-        $tags = Tag::all();
-
-        return response()->json(['tags' => $tags]);
+        $tags = Tag::with('blog', 'category')->get();
+        return view('admin.tags.index', compact('tags'));
     }
 
-    public function show($id)
+    public function create()
     {
-        $tag = Tag::with('blogs')->find($id);
-
-        if (!$tag) {
-            return response()->json(['error' => 'Tag not found'], 404);
-        }
-
-        return response()->json(['tag' => $tag]);
+        $blogs = Blog::all();
+        $categories = Category::all();
+        return view('admin.tags.create', compact('blogs', 'categories'));
     }
 
-    public function store(Request $request)
+    public function store(TagRequest $request)
     {
-        $validatedData = $request->validate(Tag::$rules);
-
-        $tag = Tag::create($validatedData);
-
-        return response()->json(['tag' => $tag], 201);
+        $tag = Tag::create($request->validated());
+        $tag->blogs()->attach($request->input('blogs'));
+        return redirect()->route('admin.tags.index')->with('success', 'Tag created successfully.');
     }
 
-    public function update(Request $request, $id)
+    public function edit(Tag $tag)
     {
-        $validatedData = $request->validate(Tag::$rules);
-
-        $tag = Tag::find($id);
-
-        if (!$tag) {
-            return response()->json(['error' => 'Tag not found'], 404);
-        }
-
-        $tag->update($validatedData);
-
-        return response()->json(['tag' => $tag]);
+        $blogs = Blog::all();
+        $categories = Category::all();
+        return view('admin.tags.edit', compact('tag', 'blogs', 'categories'));
     }
 
-    public function destroy($id)
+    public function update(TagRequest $request, Tag $tag)
     {
-        $tag = Tag::find($id);
+        $tag->update($request->validated());
+        $tag->blogs()->sync($request->input('blogs'));
+        return redirect()->route('admin.tags.index')->with('success', 'Tag updated successfully.');
+    }
 
-        if (!$tag) {
-            return response()->json(['error' => 'Tag not found'], 404);
-        }
-
+    public function destroy(Tag $tag)
+    {
+        $tag->blogs()->detach();
         $tag->delete();
-
-        return response()->json(['message' => 'Tag deleted']);
+        return redirect()->route('admin.tags.index')->with('success', 'Tag deleted successfully.');
     }
 }
+
 
 ?>
 

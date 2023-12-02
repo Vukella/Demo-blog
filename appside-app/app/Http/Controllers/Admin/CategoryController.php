@@ -1,66 +1,50 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CategoryRequest;
 use App\Models\Category;
-use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
     public function index()
     {
         $categories = Category::all();
-
-        return response()->json(['categories' => $categories]);
+        return view('admin.categories.index', compact('categories'));
     }
 
-    public function show($id)
+    public function create()
     {
-        $category = Category::with('blogs')->find($id);
-
-        if (!$category) {
-            return response()->json(['error' => 'Category not found'], 404);
-        }
-
-        return response()->json(['category' => $category]);
+        return view('admin.categories.create');
     }
 
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        $validatedData = $request->validate(Category::$rules);
+        Category::create($request->validated());
 
-        $category = Category::create($validatedData);
-
-        return response()->json(['category' => $category], 201);
+        return redirect()->route('admin.categories.index')->with('success', 'Category created successfully.');
     }
 
-    public function update(Request $request, $id)
+    public function edit(Category $category)
     {
-        $validatedData = $request->validate(Category::$rules);
-
-        $category = Category::find($id);
-
-        if (!$category) {
-            return response()->json(['error' => 'Category not found'], 404);
-        }
-
-        $category->update($validatedData);
-
-        return response()->json(['category' => $category]);
+        return view('admin.categories.edit', compact('category'));
     }
 
-    public function destroy($id)
+    public function update(CategoryRequest $request, Category $category)
     {
-        $category = Category::find($id);
+        $category->update($request->validated());
 
-        if (!$category) {
-            return response()->json(['error' => 'Category not found'], 404);
-        }
+        return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully.');
+    }
 
+    public function destroy(Category $category)
+    {
         $category->delete();
 
-        return response()->json(['message' => 'Category deleted']);
+        return redirect()->route('admin.categories.index')->with('success', 'Category deleted successfully.');
     }
 }
+
 
 ?>
