@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\BlogController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,18 +13,18 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-// Frontend Routes
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog-details', [BlogController::class, 'show']);
-
-// Admin Panel Routes
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::resource('blogs', 'Admin\BlogController');
-    Route::resource('tags', 'Admin\TagController');
-    Route::resource('categories', 'Admin\CategoryController');
+Route::get('/blog', function () {
+    return view('blog');
 });
 
+Route::get('/blog-details', function () {
+    return view('blog-details');
+});
+
+Route::resource('blogs', 'BlogController');
+Route::resource('tags', 'TagController');
+Route::resource('categories', 'CategoryController');
