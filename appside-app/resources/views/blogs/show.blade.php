@@ -22,24 +22,24 @@
                         </div>
                         <div class="entry-content">
                             <ul class="post-meta">
-                                <li><a href="#"><i class="far fa-calendar-alt"></i> 12-01-2019</a></li>
-                                <li><a href="#"><i class="far fa-user"></i> Admin</a></li>
+                                <li><a href="#"><i class="far fa-calendar-alt"></i> {{$blog->published_at}}</a></li>
+                                <li><a href="#"><i class="far fa-user"></i> {{$blog->author->name}}</a></li>
                                 <li class="cat"><i class="fas fa-tags"></i> <a href="#">Lifestyle</a> <a href="#">Travel</a><a href="#">Music</a></li>
                             </ul>
-                            <h4 class="title">Did even but nor are most gave hope depend son repair day ladies now  </h4>
-                            <p>Lorem Ipsums is simply dummy text of the print  industry. Lorem Ipsum has industry's standard dummy text ever since. Lorem Ipsums is simply dummy text of the print  industry. Lorem Ipsum has industry's standard dummy text ever since.</p>
-                            <p>Proin vitae blandit felis. Proin rhoncus imperdiet facilisis. Etiam et mauris ex. Maecenas posuere ipsum orci, at imperdiet est venenatis quis. Maecenas quis fermentum ipsum, ac eleifend urna. Cras sed viverra nibh. Mauris eget finibus erat. Mauris tempor varius purus nec cursus. Nullam ornare eget ipsum sit amet consequat. Nunc finibus vitae diam non suscipit. Praesent elementum felis sit amet urna tempus commodo. Proin congue id ante ac maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec euismod arcu venenatis, viverra arcu eu, efficitur mauris. Aliquam sagittis sagittis elit, in cursus est faucibus in.</p>
+                            <h4 class="title">{{ $blog->title }}  </h4>
+                           {!!$blog->body!!}
+                        <!-- 
                             <blockquote>
                                     Nunc blandit tincidunt consequat. Duis diam metus, suscipit ininar eget, egestas id arcu. Duis a enim vel mauris ultrices. Nullam aliquet velit ac velit tempus in semper.
                             </blockquote>
-                            <p>Lorem Ipsums is simply dummy text of the print  industry. Lorem Ipsum has industry's standard dummy text ever since. Lorem Ipsums is simply dummy text of the print  industry. Lorem Ipsum has industry's standard dummy text ever since.</p>
-                            <p>Proin vitae blandit felis. Proin rhoncus imperdiet facilisis. Etiam et mauris ex. Maecenas posuere ipsum orci, at imperdiet est venenatis quis. Maecenas quis fermentum ipsum, ac eleifend urna. Cras sed viverra nibh. Mauris eget finibus erat. Mauris tempor varius purus nec cursus.</p>
+                        -->
+                            
                         </div>
                         <div class="entry-footer"><!-- entry footer -->
                             <div class="left">
                                 <ul class="tags">
-                                    <li class="title">Tags: </li>
-                                    <li><a href="#">Marketing</a><a href="#">Design</a></li>
+                                    <li class="title">Tag: </li>
+                                    <li><a href="#">{{$blog->tag->title}}</a></li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -56,72 +56,25 @@
                             <h3 class="comment-title">03 Comments</h3>
                             <ul class="comment-list">
                                 <li>
-                                    <div class="single-comment-wrap"><!-- single comment wrap -->
-                                        <div class="thumb">
-                                            <img src="assets/img/comments/01.jpg" alt="comment images">
-                                           
-                                        </div>
-                                        <div class="content">
-                                                <span class="date">12 Sep,18</span>
-                                            <h4 class="title">Steve Smith</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
-                                            <a href="#" class="reply">Reply</a>
-                                        </div>
-                                    </div><!-- //. single comment wrap -->
+<!-- //. single comment wrap -->
                                 </li>
                                 <li class="has-children">
                                     <ul>
                                         <li>
-                                            <div class="single-comment-wrap"><!-- single comment wrap -->
-                                                <div class="thumb">
-                                                    <img src="assets/img/comments/02.jpg" alt="comment images">
-                                                    
-                                                </div>
-                                                <div class="content">
-                                                     <span class="date">12 Sep,18</span>
-                                                    <h4 class="title">Jhon Martin</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
-                                                    <a href="#" class="reply">Reply</a>
-                                                </div>
-                                            </div><!-- //. single comment wrap -->
+                                            @include('components.single-comment-wrap')<!-- //. single comment wrap -->
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <div class="single-comment-wrap"><!-- single comment wrap -->
-                                        <div class="thumb">
-                                            <img src="assets/img/comments/01.jpg" alt="comment images">
-                                           
-                                        </div>
-                                        <div class="content">
-                                                <span class="date">12 Sep,18</span>
-                                            <h4 class="title">Warner Martin</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
-                                            <a href="#" class="reply">Reply</a>
-                                        </div>
-                                    </div><!-- //. single comment wrap -->
+                                    @include('components.single-comment-wrap')<!-- //. single comment wrap -->
+                                </li>
+                                <li>
+                                    @include('components.single-comment-wrap')<!-- //. single comment wrap -->
                                 </li>
                             </ul>
                         </div>
-    
-                        <div class="comment-form-wrap"><!-- comment form wrap --> 
-                            <h3 class="title">Leave A Comment</h3>
-                            <form action="blog-details.html" class="comment-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name...">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject...">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email...">
-                                </div>
-                                <div class="form-group textarea">
-                                    <textarea name="message" id="message" class="form-control" placeholder="Message..." cols="30" rows="10"></textarea>
-                                </div>
-                                <button class="submit-btn" type="submit">Post Comment</button>
-                            </form>
-                        </div><!-- //.comment form wrap --> 
+  
+                        @include ('components.comment-form-wrap');
                     </div> 
             </div>
             <div class="col-lg-4">
@@ -140,12 +93,9 @@
                         <div class="widget widget_categories"><!-- widget  -->
                             <h4 class="widget-title">Categories</h4>
                             <ul>
-                                <li class="cat-item"><a href="#">Lifestyle</a></li>
-                                <li class="cat-item"><a href="#">Travel</a></li>
-                                <li class="cat-item"><a href="#">Fashion</a></li>
-                                <li class="cat-item"><a href="#">Music</a></li>
-                                <li class="cat-item"><a href="#">Branding</a></li>
-                                <li class="cat-item"><a href="#">History</a></li>
+                                @foreach ($categories as $category)
+                                    <li class="cat-item"><a href="#">{{$category->name}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="widget widget_popular_posts"><!-- widget  -->
@@ -185,13 +135,9 @@
                         <div class="widget widget_tag_cloud"><!-- widget -->
                             <h4 class="widget-title">Tags</h4>
                             <div class="tagcloud">
-                                <a href="#">Events</a>
-                                <a href="#">Love</a>
-                                <a href="#">Story</a>
-                                <a href="#">Gift</a>
-                                <a href="#">Events</a>
-                                <a href="#">First Metting</a>
-                                <a href="#">Couple</a>
+                                @foreach ($tags as $tag)
+                                    <a href="#">{{$tag->name}}</a>
+                                @endforeach
                             </div>
                         </div>
     

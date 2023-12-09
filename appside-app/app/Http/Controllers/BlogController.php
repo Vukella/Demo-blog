@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -19,8 +21,13 @@ class BlogController extends Controller
 
     public function show(Blog $blog)
     {
+        $categories = Category::all();
+        $tags = Tag::all();
+        
         return view('blogs.show',[
-            'blog'=> $blog
+            'blog'=> $blog,
+            'categories' => $categories,
+            'tags' => $tags
             ]);
     }
 }

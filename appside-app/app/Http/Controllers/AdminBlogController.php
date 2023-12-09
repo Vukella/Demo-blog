@@ -10,7 +10,7 @@ class AdminBlogController extends Controller
 {
     public function index()
     {
-        return view('admin.posts.index', [
+        return view('admin.blogs.index', [
             'posts' => Blog::paginate(50)
         ]);
     }

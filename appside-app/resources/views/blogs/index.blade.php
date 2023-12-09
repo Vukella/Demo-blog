@@ -17,7 +17,7 @@
             <div class="col-lg-8">
                 <div class="row">
                     @if ($blogs->count())
-                        <x-components.blogs-grid :blogs="$blogs" />
+                        <x-blogs-grid :blogs="$blogs" />
 
                         {{$blogs->links()}}
                     @endif

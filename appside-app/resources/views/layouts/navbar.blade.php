@@ -14,19 +14,19 @@
             <div class="collapse navbar-collapse" id="appside_main_menu">
                 <ul class="navbar-nav">
                     <li class="current-menu-item">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li><a href="/blogs">Blog</a></li>
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="/blogs">Blogs</a></li>
+                    <li><a href="/login">Log In</a></li>
                 </ul>
             </div>
             <div class="nav-right-content">
                 <ul>
                     <li class="button-wrapper">
-                        <a href="#" class="boxed-btn btn-rounded">Register</a>
+                        <a href="/register" class="boxed-btn btn-rounded">Register</a>
                     </li>
                 </ul>
             </div>

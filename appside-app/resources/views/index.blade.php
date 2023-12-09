@@ -5,49 +5,49 @@
 
 <body>
     <!-- navbar area -->
-  @include('layouts.navbar')
+@include('layouts.navbar')
     <!-- header area -->
-  @include ('layouts.header')
+@include ('layouts.header')
     
 
 <!-- about us area start -->
-@include('main.about-us')
+@include('main-areas.about-us')
 <!-- about us area end -->
 
 <!-- video area start -->
-@include('main.video')
+@include('main-areas.video')
 <!-- video area end -->
 
 <!-- counterup area start -->
-@include('main.counterup')
+@include('main-areas.counterup')
 <!-- counterup area end -->
 
 <!-- why choose area start -->
-@include('main.why-choose')
+@include('main-areas.why-choose')
 <!-- why choose area end -->
 
 <!-- how it works area start -->
-@include('main.how-it-works')
+@include('main-areas.how-it-works')
 <!-- how it works area end -->
 
 <!-- screenshort area start -->
-@include('main.testimonial')
+@include('main-areas.testimonial')
 <!-- testimonial area end -->
 
 <!-- price plan area start -->
-@include('main.price-plan')
+@include('main-areas.price-plan')
 <!-- price plan area end -->
 
 <!-- team member area start -->
-  @include('main.team-member')
+@include('main-areas.team-member')
 <!-- team member area end -->
 
 <!-- footer area -->
-  @include('layouts.footer')
+@include('layouts.footer')
 
 
 <!-- preloader area start -->
-  @include('layouts.preloader-area')
+@include('layouts.preloader-area')
 
   <!-- back to top area start -->
   <div class="back-to-top">
