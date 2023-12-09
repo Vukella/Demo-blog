@@ -27,7 +27,7 @@ class BlogFactory extends Factory
             'tag_id' => Tag::factory(),
             'title' => $this->faker->unique()->sentence(),
             'slug' => $this->faker->unique()->slug(),
-            'body' => '<p>' . implode('</p><p>', $this->faker->paragraph(6)) . '</p>'
+            'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>'
         ];
     }
 }
