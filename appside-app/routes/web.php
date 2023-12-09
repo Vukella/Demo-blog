@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminBlogController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('index');})->name('home');
 
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
-Route::get('blogss/{blog:slug}', [BlogController::class, 'show']);
+Route::get('blogs/{blog:slug}', [BlogController::class, 'show']);
 
-Route::get('/blog-details', function () {
-    return view('blog-details');
-});
+//Admin section
+Route::post('admin/blogs', [AdminBlogController::class, 'store'])->middleware('admin');
+Route::get('admin/blogs/create', [AdminBlogController::class, 'create'])->middleware('admin');
+Route::get('admin/blogs', [AdminBlogController::class, 'index'])->middleware('admin');
+Route::get('admin/blogs/{blog}/edit', [AdminBlogController::class, 'edit'])->middleware('admin');
+Route::patch('admin/blogs/{blog}', [AdminBlogController::class, 'update'])->middleware('admin');
+Route::delete('admin/blogs/{blog}', [AdminBlogController::class, 'destroy'])->middleware('admin');
