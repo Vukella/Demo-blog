@@ -19,20 +19,14 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog 01</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/blogs">Blog</a></li>
+                    <li><a href="#">Log In</a></li>
                 </ul>
             </div>
             <div class="nav-right-content">
                 <ul>
                     <li class="button-wrapper">
-                        <a href="#" class="boxed-btn btn-rounded">Download</a>
+                        <a href="#" class="boxed-btn btn-rounded">Register</a>
                     </li>
                 </ul>
             </div>
