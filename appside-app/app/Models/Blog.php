@@ -9,6 +9,8 @@ class Blog extends Model
 {
     use HasFactory;
 
+    protected $with = ['category', 'tag', 'author'];
+
     public function tag()
     {
         return $this->belongsTo(Tag::class);
