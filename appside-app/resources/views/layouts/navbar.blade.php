@@ -19,7 +19,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li><a href="/blogs">Blogs</a></li>
+                    <li><a href="/blogs">Blog</a></li>
                     <li><a href="/login">Log In</a></li>
                 </ul>
             </div>

@@ -18,7 +18,7 @@
             <div class="col-lg-8">
                     <div class="single-post-details-item"><!-- blog single content -->
                         <div class="thumb">
-                            <img src="assets/img/blog/blog-details.jpg" alt="blog image">
+                            <img src="{{asset('public\storage\thumbnails\587508.png')}}" alt="blog image">
                         </div>
                         <div class="entry-content">
                             <ul class="post-meta">
