@@ -12,10 +12,15 @@ class BlogController extends Controller
     //
     public function index()
     {
+        $categories = Category::all();
+        $tags = Tag::all();
+
         return view('blogs.index',[
             'blogs' => Blog::latest()->filter(
                 request(['category','authors'])
-                )->paginate(10)->withQueryString()
+                )->paginate(10)->withQueryString(),
+            'categories'=> $categories,
+            'tags'=> $tags
         ]);
     }
 

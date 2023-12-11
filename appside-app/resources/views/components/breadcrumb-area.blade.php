@@ -5,8 +5,8 @@
                 <div class="breadcrumb-inner">
                     <h1 class="page-title">Blogs</h1>
                     <ul class="page-navigation">
-                        <li><a href="#"> Home</a></li>
-                        <li>Blog Details</li>
+                        <li><a href="/"> Home</a></li>
+                        <li>Blogs</li>
                     </ul>
                 </div>
             </div>

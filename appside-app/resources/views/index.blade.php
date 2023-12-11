@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-  @include('layouts.head')
+  @include('components.head')
 
 <body>
     <!-- navbar area -->
-@include('layouts.navbar')
+<x-navbar>
     <!-- header area -->
-@include ('layouts.header')
+  @include ('main-areas.header')
     
-
+</x-navbar>
 <!-- about us area start -->
 @include('main-areas.about-us')
 <!-- about us area end -->
@@ -43,11 +43,11 @@
 <!-- team member area end -->
 
 <!-- footer area -->
-@include('layouts.footer')
+@include('components.footer')
 
 
 <!-- preloader area start -->
-@include('layouts.preloader-area')
+@include('components.preloader-area')
 
   <!-- back to top area start -->
   <div class="back-to-top">
@@ -56,7 +56,7 @@
   <!-- back to top area end -->
 
   <!-- scripts -->
-  @include('layouts.scripts')
+  @include('components.scripts')
 </body>
 
 </html>
